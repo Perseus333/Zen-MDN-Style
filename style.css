@@ -1,0 +1,49 @@
+@-moz-document url-prefix("https://developer.mozilla.org/en-US/docs/") {
+
+/* Just activating the rule below makes the website x3 better,
+Not needed when all other rules here are applied*/
+/*
+.sticky-header-container {
+	position: relative !important;
+}
+*/
+
+.top-navigation-wrap, /*The MDN logo*/
+.top-navigation-main > *:not(.header-search), /*Every element in the top header except the search bar*/
+.article-actions-container, /*The breadcrumb at the header*/
+.icon-cancel, /*The clear icon in the search bar*/
+#sidebar-quicklinks, /*The other docs (the one that was originally in the left) sidebar*/
+.toc-container > section, /*Redundant stuff below the sidebar*/
+.article-footer, /*The "Help Improve MDN" banner*/
+footer /*The footer duh*/
+{
+	display: none !important;
+}
+
+/*Everything below just puts the search bar on the left to integrate it with the sidebar*/
+
+#top-nav-search-input.has-search-results {
+	max-width: 200px;
+}
+
+.sticky-header-container {
+	width: fit-content !important;
+	height: 0 !important;
+}
+
+.container {
+	padding: 0 !important;
+	justify-content: right;
+}
+
+/*Hides the header bottom separator*/
+.top-navigation {
+	border-bottom: none !important;
+}
+
+.top-navigation-main {
+	width: fit-content;
+	padding: 1.5rem !important;
+}
+
+}
